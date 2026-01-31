@@ -1,0 +1,14 @@
+@startuml
+title Singleton Pattern - Database Connection
+
+class DatabaseConnection {
+  - _instance
+  + connect()
+}
+
+note right of DatabaseConnection
+Only one instance exists
+Singleton Pattern
+end note
+
+@enduml
