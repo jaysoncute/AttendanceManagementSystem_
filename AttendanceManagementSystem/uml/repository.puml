@@ -1,0 +1,20 @@
+@startuml
+title Repository Pattern - Attendance Data Access
+
+class AttendanceRepository {
+  + add_attendance(student_id, date)
+  + get_attendance(student_id)
+}
+
+class DatabaseConnection {
+  + connect()
+}
+
+AttendanceRepository --> DatabaseConnection
+
+note right of AttendanceRepository
+Separates data access from business logic
+Repository Pattern
+end note
+
+@enduml
