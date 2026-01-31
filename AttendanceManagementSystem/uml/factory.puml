@@ -1,0 +1,21 @@
+@startuml
+title Factory Pattern - User Creation
+
+class UserFactory {
+  + create_user(role)
+}
+
+class Student
+class Teacher
+class Admin
+
+UserFactory --> Student
+UserFactory --> Teacher
+UserFactory --> Admin
+
+note right of UserFactory
+Handles object creation logic
+Factory Pattern
+end note
+
+@enduml
